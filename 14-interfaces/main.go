@@ -20,6 +20,11 @@ type Pessoa interface {
 	Desativar()
 }
 
+type Empresa struct {
+	Nome  string
+	Ativo bool
+}
+
 func Desativacao(pessoa Pessoa) {
 	pessoa.Desativar()
 }
@@ -27,6 +32,11 @@ func Desativacao(pessoa Pessoa) {
 func (c Cliente) Desativar() {
 	c.Ativo = false
 	fmt.Printf("Nome: %s, Idade: %d, Ativo: %t, Cidade: %s\n", c.Nome, c.Idade, c.Ativo, c.Cidade)
+}
+
+func (e Empresa) Desativar() {
+	e.Ativo = false
+	fmt.Printf("Nome: %s, Ativo: %t\n", e.Nome, e.Ativo)
 }
 
 func main() {
@@ -37,4 +47,10 @@ func main() {
 	}
 	van.Cidade = "São Paulo"
 	Desativacao(van)
+
+	minaEmpresa := Empresa{
+		Nome:  "Empresa",
+		Ativo: true,
+	}
+	Desativacao(minaEmpresa)
 }
