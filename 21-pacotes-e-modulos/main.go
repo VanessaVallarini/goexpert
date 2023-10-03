@@ -2,8 +2,7 @@ package main
 
 import (
 	"fmt"
-
-	"github.com/VanessaVallarini/goexpert/21/modulos/matematica"
+	"goexpert/21-pacotes-e-modulos/matematica"
 )
 
 func main() {
