@@ -1,6 +1,12 @@
 package main
 
+import (
+	"fmt"
+
+	"github.com/VanessaVallarini/goexpert/21/modulos/matematica"
+)
+
 func main() {
-	//s := Soma(10, 20)
-	//fmt.Println("Resultado: %v", s)
+	s := matematica.Soma(10, 20)
+	fmt.Printf("Resultado: %v", s)
 }
